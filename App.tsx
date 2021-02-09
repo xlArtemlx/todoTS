@@ -1,4 +1,5 @@
 import React,{useEffect} from 'react';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
 import {
   SafeAreaView,
   StyleSheet,
@@ -17,7 +18,9 @@ const App = () => {
     <>
       <StatusBar barStyle="dark-content" />
        <Provider store ={store}>
-          <AppNavigation />
+        <SafeAreaProvider>
+            <AppNavigation />
+          </SafeAreaProvider>
         </Provider>
     </>
   );
