@@ -4,36 +4,40 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
 import {List} from '../List/List'
 import {Profile} from '../Profile/Profile'
+import Icon from 'react-native-vector-icons/FontAwesome';
 
 const Tab =  createMaterialTopTabNavigator();
-
 
 export function AppNavigation() {
   return (
     <NavigationContainer>
-      <Tab.Navigator
+      <Tab.Navigator 
           tabBarOptions={{
-            activeTintColor: '#255F92',
-            tabStyle: {
-                backgroundColor: '#FFFFFF',
-                top: -3,
-                borderTopWidth: 1,
-                borderColor: '#D3D3D3'
-            },
-            labelStyle: {
-                marginBottom: 3
-            },
-            showIcon:true
+            activeTintColor: '#888888',
             
+            labelStyle: {
+                marginBottom: 0
+            },
+            showIcon:true,
+            showLabel:false,
+            indicatorStyle: {
+                top: 0,
+                backgroundColor: '#A52A2A',
+               
+            },
+           style:{
+               backgroundColor:'#fdf1d6'
+           },
+           pressColor:'#A52A2A',
         }}
+        
       >
             <Tab.Screen 
             name="List" 
             component={List}
             options={{
                 tabBarIcon: ({focused}) => {
-                    let icStyle = focused ?  styles.focus :  styles.unFocus
-                    return <Image style={{...styles.Icon, ...icStyle}} source={require('../../images/todo-list.png')}/>
+                    return <Icon name='book'size={24} color={focused?'#A52A2A': '#888888'}/>
                 },
             }}
             
@@ -44,8 +48,8 @@ export function AppNavigation() {
             component={Profile} 
             options={{
                 tabBarIcon: ({focused}) => {
-                    let icStyle = focused ?  styles.focus :  styles.unFocus
-                    return <Image style={{...styles.Icon, ...icStyle}} source={require('../../images/avatar.png')}/>
+                    return  <Icon name='user'size={24} color={focused?'#A52A2A': '#888888'}/>
+
                 },
             }}
             />
@@ -59,15 +63,7 @@ export function AppNavigation() {
 
 const styles = {
     Icon: {
-        width: 25,
-        height: 25,
+        width: 27,
+        height: 27,
     },
-    focus:{
-        opacity: 1,
-        tintColor: '#4169E1'
-    },
-    unFocus:{
-        opacity: 0.5,
-        tintColor: '#6d6d74'
-    }
 };

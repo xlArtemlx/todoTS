@@ -9,14 +9,14 @@ export const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
         borderRadius: 7,
-        backgroundColor:'red',
+        backgroundColor:'#eaffd0',
         marginTop: 20,
     },
     buttonText: {
-        color: '#fff',
+        color: '#FFFFFF',
         textTransform: 'uppercase',
         paddingHorizontal:10,
         fontSize:18,
-    }
+    },
 
 });

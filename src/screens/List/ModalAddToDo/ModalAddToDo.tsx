@@ -40,11 +40,11 @@ export const ModalAddToDo:React.FC<Props> = ({controlModal,editId}) => {
             controlModal()
          return    
         }
-        if(newToDo.length){ 
+        if(newToDo.length&&newToDo.length<70){ 
             dispatch(setListTC([...list,{id:id(),text:newToDo}]))
             controlModal()
         } else {
-            setErrorText('Минимум 1 буква')
+            setErrorText('Минимум 1 буква и максимум 70 символов')
         }
     }
 
@@ -57,7 +57,7 @@ export const ModalAddToDo:React.FC<Props> = ({controlModal,editId}) => {
                     <Icon
                     name='check-circle'
                     size={24}
-                    color='black'
+                    color='#A52A2A'
                     />
                 }
                 onChangeText={val => {setToDo(val); setErrorText('')}}

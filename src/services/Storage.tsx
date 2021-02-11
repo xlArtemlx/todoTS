@@ -1,10 +1,6 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
 class Storage {
-    constructor() {
-        
-    }
-
     async  setStorage(key:string,value:any){
         try {
             await AsyncStorage.setItem(key, value)
@@ -13,7 +9,7 @@ class Storage {
           }
     }
 
-    async  getSorage(key:string){
+    async  getStorage(key:string){
         try {
             const value = await AsyncStorage.getItem(key)
             if(value !== null) {

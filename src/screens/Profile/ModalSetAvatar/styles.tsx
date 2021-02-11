@@ -8,17 +8,10 @@ export const styles = StyleSheet.create({
         height:200,
         borderRadius:10,
     },
-    buttonAdd: {
-        backgroundColor:'#A52A2A'
-        
-    },
-    buttonClose: {
-        backgroundColor:'#A52A2A'
-    },
     buttons : {
-        flexDirection:'row',
-        justifyContent:'space-around',
-        width:'100%'
+        backgroundColor:'#A52A2A',
+        margin:10,
+        borderRadius:10
     },
     errorText: {
         fontSize:14

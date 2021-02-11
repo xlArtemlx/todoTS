@@ -2,7 +2,8 @@ import {StyleSheet,} from 'react-native';
 
 export const styles = StyleSheet.create({
     container:{
-        flex:1
+        flex:1,
+        backgroundColor:'#ffffff'
     },
     list: {
         
@@ -14,4 +15,8 @@ export const styles = StyleSheet.create({
         borderRadius: 7,
         marginTop: 20,
     },
+    plus:{
+        alignItems: 'center',
+        backgroundColor:'#fdf1d6',
+    }
 });
