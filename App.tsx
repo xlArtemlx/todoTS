@@ -10,13 +10,16 @@ import {Provider} from 'react-redux';
 import store from "./src/redux/store/store";
 import SplashScreen from 'react-native-splash-screen'
 
+
 const App = () => {
+
   useEffect(()=>{
     SplashScreen.hide();
+    
   },[])
   return (
     <>
-      <StatusBar barStyle="dark-content" />
+      <StatusBar barStyle="dark-content"/>
        <Provider store ={store}>
         <SafeAreaProvider>
             <AppNavigation />
